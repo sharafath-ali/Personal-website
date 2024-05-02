@@ -2,7 +2,7 @@ import React from "react";
 
 function Header() {
   return (
-    <div className="flex justify-between bg-stone-500 p-10 items-center">
+    <div className="flex justify-between bg-stone-500 p-10 items-center sticky top-0">
       <div className="flex justify-between">
         <h1 className="font-mono from-neutral-700 font-black  text-xl">
           Sharafath Ali
