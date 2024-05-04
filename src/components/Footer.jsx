@@ -19,14 +19,6 @@ function Footer() {
             rel="noopener noreferrer"
             className="friend-logo"
           >
-            <img src={instagram} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/sharafathalivk"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="friend-logo"
-          >
             <img src={linkedin} />
           </a>
           <a
@@ -35,7 +27,15 @@ function Footer() {
             rel="noopener noreferrer"
             className="friend-logo"
           >
-            <img src={gitHub} />
+            <img src={instagram} />
+          </a>
+          <a
+            href="https://github.com/sharafath-ali"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="friend-logo"
+          >
+            <img src={gitHub} className="w-13" />
           </a>
         </div>
       </div>
