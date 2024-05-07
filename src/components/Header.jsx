@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -15,17 +16,23 @@ function Header() {
       <div className="flex justify-between items-center">
         <div>
           <p className="font-mono from-neutral-600 font-black px-4 hover:bg-slate-100">
-            ABOUT ME
+            <Link to="/">ABOUT ME</Link>
           </p>
         </div>
         <div>
-          <p className="font-mono from-neutral-700 font-black px-4">RESUME</p>
+          <p className="font-mono from-neutral-700 font-black px-4">
+            <Link to="/Resume">RESUME</Link>
+          </p>
         </div>
         <div>
-          <p className="font-mono from-neutral-700 font-black px-4">PROJECTS</p>
+          <p className="font-mono from-neutral-700 font-black px-4">
+            <Link to="/Projects">PROJECTS</Link>
+          </p>
         </div>
         <div>
-          <p className="font-mono from-neutral-700 font-black px-4">CONTACT</p>
+          <p className="font-mono from-neutral-700 font-black px-4">
+            <Link to="/Contact">CONTACT</Link>
+          </p>
         </div>
       </div>
     </div>
