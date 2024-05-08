@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Header() {
+  const { pathname } = useLocation();
+
   return (
     <div className="flex justify-between bg-stone-500 p-10 items-center sticky top-0">
       <div className="flex justify-between">
@@ -15,23 +17,23 @@ function Header() {
       </div>
       <div className="flex justify-between items-center">
         <div>
-          <p className="font-mono from-neutral-600 font-black px-4 hover:bg-slate-100">
-            <Link to="/">ABOUT ME</Link>
+          <p className="font-mono from-neutral-600 font-black px-4">
+            <Link to="/" className={pathname==="/" ? "text-slate-100" : ""}>ABOUT ME</Link>
           </p>
         </div>
         <div>
           <p className="font-mono from-neutral-700 font-black px-4">
-            <Link to="/Resume">RESUME</Link>
+            <Link to="/Resume" className={pathname==="/Resume" ? "text-slate-100" : ""}>RESUME</Link>
           </p>
         </div>
         <div>
           <p className="font-mono from-neutral-700 font-black px-4">
-            <Link to="/Projects">PROJECTS</Link>
+            <Link to="/Projects" className={pathname==="/Projects" ? "text-slate-100" : ""}>PROJECTS</Link>
           </p>
         </div>
         <div>
           <p className="font-mono from-neutral-700 font-black px-4">
-            <Link to="/Contact">CONTACT</Link>
+            <Link to="/Contact" className={pathname==="/Contact" ? "text-slate-100" : ""}>CONTACT</Link>
           </p>
         </div>
       </div>
