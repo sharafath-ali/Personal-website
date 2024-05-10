@@ -14,7 +14,10 @@ function Body() {
   };
 
   return (
-    <div className="flex justify-between py-5 px-5 items-center bg-customGray" style={{backgroundColor:'rgb(246, 245, 250)'}}>
+    <div
+      className="flex justify-between py-5 px-5 items-center bg-customGray"
+      style={{ backgroundColor: "rgb(246, 245, 250)" }}
+    >
       <div style={{ width: "50%" }} className="flex justify-end">
         <div className="border-y border-x border-70">
           <img className="border-x border-y rounded-full w-72" src={Profile} />
