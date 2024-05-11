@@ -15,7 +15,7 @@ function Body() {
 
   return (
     <div
-      className="flex justify-between py-5 px-5 items-center bg-customGray"
+      className="h-dvh flex justify-between py-5 px-5 items-center bg-customGray"
       style={{ backgroundColor: "rgb(246, 245, 250)" }}
     >
       <div style={{ width: "50%" }} className="flex justify-end">
