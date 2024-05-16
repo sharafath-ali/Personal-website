@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { formValidation } from "../Utils/formValidation";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -21,7 +22,8 @@ function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here, e.g., send data to backend
-    console.log(formData);
+    
+    console.log(formData , formValidation(formData));
     // Reset form fields
     setFormData({
       firstName: "",
@@ -67,7 +69,7 @@ function ContactForm() {
           Email
         </label>
         <input
-          type="email"
+          // type="email"
           id="email"
           name="email"
           value={formData.email}
