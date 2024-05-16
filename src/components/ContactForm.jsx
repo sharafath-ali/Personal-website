@@ -9,6 +9,13 @@ function ContactForm() {
     subject: "",
     message: "",
   });
+  const [error, setError] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,29 +26,37 @@ function ContactForm() {
     }));
   };
 
+  const onSaveClick = (e) => {
+    e.preventDefault();
+    const validOrNot = formValidation(formData);
+    console.log(formData, formValidation(formData));
+
+    if (validOrNot) {
+      setError(validOrNot);
+    } else {
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here, e.g., send data to backend
-    
-    console.log(formData , formValidation(formData));
-    // Reset form fields
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto w-full">
+    <form className="max-w-md mx-auto w-full">
       <div className="mb-4">
         <label htmlFor="firstName" className="block text-gray-700">
           First Name
         </label>
         <input
-          type="text"
+          // type="text"
           id="firstName"
           name="firstName"
           value={formData.firstName}
@@ -49,13 +64,14 @@ function ContactForm() {
           required
           className="mt-1 px-4 py-2 border border-gray-300 rounded-md w-full focus:outline-none focus:border-indigo-500"
         />
+        {error.firstName && <p className="text-rose-700">{error.firstName}</p>}
       </div>
       <div className="mb-4">
         <label htmlFor="lastName" className="block text-gray-700">
           Last Name
         </label>
         <input
-          type="text"
+          // type="text"
           id="lastName"
           name="lastName"
           value={formData.lastName}
@@ -63,6 +79,7 @@ function ContactForm() {
           required
           className="mt-1 px-4 py-2 border border-gray-300 rounded-md w-full focus:outline-none focus:border-indigo-500"
         />
+        {error.lastName && <p className="text-rose-700">{error.lastName}</p>}
       </div>
       <div className="mb-4">
         <label htmlFor="email" className="block text-gray-700">
@@ -77,13 +94,14 @@ function ContactForm() {
           required
           className="mt-1 px-4 py-2 border border-gray-300 rounded-md w-full focus:outline-none focus:border-indigo-500"
         />
+        {error.email && <p className="text-rose-700">{error.email}</p>}
       </div>
       <div className="mb-4">
         <label htmlFor="subject" className="block text-gray-700">
           Subject
         </label>
         <input
-          type="text"
+          // type="text"
           id="subject"
           name="subject"
           value={formData.subject}
@@ -91,6 +109,7 @@ function ContactForm() {
           required
           className="mt-1 px-4 py-2 border border-gray-300 rounded-md w-full focus:outline-none focus:border-indigo-500"
         />
+        {error.subject && <p className="text-rose-700">{error.subject}</p>}
       </div>
       <div className="mb-4">
         <label htmlFor="message" className="block text-gray-700">
@@ -105,9 +124,11 @@ function ContactForm() {
           rows="4"
           className="mt-1 px-4 py-2 border border-gray-300 rounded-md w-full focus:outline-none focus:border-indigo-500"
         />
+        {error.message && <p className="text-rose-700">{error.message}</p>}
       </div>
       <button
-        type="submit"
+        // type="submit"
+        onClick={onSaveClick}
         className="px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600"
       >
         SEND
