@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { formValidation } from "../Utils/formValidation";
+import axios from "axios";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ function ContactForm() {
     subject: "",
     message: "",
   });
+
   const [error, setError] = useState({
     firstName: "",
     lastName: "",
@@ -26,27 +28,38 @@ function ContactForm() {
     }));
   };
 
-  const onSaveClick = (e) => {
+  const onSaveClick = async (e) => {
     e.preventDefault();
     const validOrNot = formValidation(formData);
-    console.log(formData, formValidation(formData));
 
     if (validOrNot) {
       setError(validOrNot);
     } else {
-      setFormData({
+      setError({
         firstName: "",
         lastName: "",
         email: "",
         subject: "",
         message: "",
       });
+      try {
+        const response = await axios.post(
+          "https://formspree.io/f/xjvnzdjp",
+          formData
+        );
+        if (response?.status === 200) {
+          setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+        }
+      } catch (error) {
+        console.log(error);
+      }
     }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here, e.g., send data to backend
   };
 
   return (
