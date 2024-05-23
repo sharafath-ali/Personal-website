@@ -30,7 +30,7 @@ export const formValidation = (props) => {
   const areAllErrorsEmpty = Object.values(formValidationErrors).every(
     (value) => value === ""
   );
-  
+
   if (areAllErrorsEmpty) {
     return false;
   } else {

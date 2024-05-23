@@ -18,22 +18,39 @@ function Header() {
       <div className="flex justify-between items-center">
         <div>
           <p className="font-mono from-neutral-600 font-black px-4">
-            <Link to="/" className={pathname==="/" ? "text-slate-100" : ""}>ABOUT ME</Link>
+            <Link to="/" className={pathname === "/" ? "text-slate-100" : ""}>
+              ABOUT ME
+            </Link>
           </p>
         </div>
         <div>
           <p className="font-mono from-neutral-700 font-black px-4">
-            <Link to="/Resume" className={pathname==="/Resume" ? "text-slate-100" : ""}>RESUME</Link>
+            <Link
+              to="/Resume"
+              className={pathname === "/Resume" ? "text-slate-100" : ""}
+            >
+              RESUME
+            </Link>
           </p>
         </div>
         <div>
           <p className="font-mono from-neutral-700 font-black px-4">
-            <Link to="/Projects" className={pathname==="/Projects" ? "text-slate-100" : ""}>PROJECTS</Link>
+            <Link
+              to="/Projects"
+              className={pathname === "/Projects" ? "text-slate-100" : ""}
+            >
+              PROJECTS
+            </Link>
           </p>
         </div>
         <div>
           <p className="font-mono from-neutral-700 font-black px-4">
-            <Link to="/Contact" className={pathname==="/Contact" ? "text-slate-100" : ""}>CONTACT</Link>
+            <Link
+              to="/Contact"
+              className={pathname === "/Contact" ? "text-slate-100" : ""}
+            >
+              CONTACT
+            </Link>
           </p>
         </div>
       </div>
