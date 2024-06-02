@@ -1,0 +1,70 @@
+/* src/components/Header.css */
+:root {
+    --dark-brown: #362c28;
+    --medium-brown: #C49E85;
+    --light-brown: #FFD6AF;
+    --white: #ffffff;
+  }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--dark-brown);
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 24px;
+    color:var(--light-brown);
+}
+
+.header-left p {
+    margin: 0;
+    font-size: 14px;
+    color:var(--light-brown);
+}
+
+.header-right a {
+    margin: 0 10px;
+    text-decoration: none;
+    color:var(--light-brown);
+}
+
+.header-right a:hover {
+    color: var(--medium-brown);
+    /* text-decoration: underline; */
+}
+
+.toblack {
+    color: var(--medium-brown) !important;
+}
+
+@media (max-width: 768px) {
+    /* .header {
+        flex-direction: column;
+        align-items: flex-start;
+    } */
+
+    .header-right {
+        margin-top: 10px;
+  
+    }
+
+    .header-right a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .header-left h1 {
+        margin: 0;
+        font-size: 20px;
+    }
+    
+    .header-left p {
+        margin: 0;
+        font-size: 11px;
+    }
+    
+}
