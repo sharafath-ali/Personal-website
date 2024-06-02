@@ -1,6 +1,6 @@
 /* src/components/Header.css */
 :root {
-    --dark-brown: #362c28;
+    --dark-brown: #333;
     --medium-brown: #C49E85;
     --light-brown: #FFD6AF;
     --white: #ffffff;
@@ -17,19 +17,19 @@
 .header-left h1 {
     margin: 0;
     font-size: 24px;
-    color:var(--light-brown);
+    color:var(--white);
 }
 
 .header-left p {
     margin: 0;
     font-size: 14px;
-    color:var(--light-brown);
+    color:var(--white);
 }
 
 .header-right a {
     margin: 0 10px;
     text-decoration: none;
-    color:var(--light-brown);
+    color:var(--white);
 }
 
 .header-right a:hover {

@@ -2,17 +2,16 @@ import React from "react";
 import gitHub from "../Assets/github.png";
 import instagram from "../Assets/instagram.png";
 import linkedin from "../Assets/linkedin.png";
-import "../App.css";
+import "../Css/Footer.css";
 
 function Footer() {
   return (
-    <div className="flex justify-between  bg-stone-500 p-5 items-center">
-      <div>© 2024 by Sharafath Ali</div>
-      <div>
-        <h5 className="text-center font-mono from-neutral-700 font-black px-4 py-2">
-          Follow
-        </h5>
-        <div className="flex justify-between w-60">
+    <>
+      <footer className="footer">
+        <div className="footer-left">
+          <p>© 2024 by Sharafath Ali</p>
+        </div>
+        <div className="footer-right">
           <a
             href="https://www.linkedin.com/in/sharafathalivk"
             target="_blank"
@@ -38,8 +37,8 @@ function Footer() {
             <img src={gitHub} className="w-13" />
           </a>
         </div>
-      </div>
-    </div>
+      </footer>
+    </>
   );
 }
 
