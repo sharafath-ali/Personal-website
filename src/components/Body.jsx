@@ -5,6 +5,7 @@ import DownloadIcon from "@mui/icons-material/Download";
 import Profile from "../Assets/profile.jpg";
 import { useNavigate } from "react-router-dom";
 import resumePDF from "../Assets/resume.pdf";
+import "../Css/Body.css";
 
 function Body() {
   const navigate = useNavigate();
@@ -14,32 +15,39 @@ function Body() {
   };
 
   return (
-    <div
-      className="h-dvh flex justify-between py-5 px-5 items-center bg-customGray"
-      style={{ backgroundColor: "rgb(246, 245, 250)" }}
-    >
-      <div style={{ width: "50%" }} className="flex justify-end">
-        <div className="border-y border-x border-70">
-          <img className="border-x border-y rounded-full w-72" src={Profile} />
-        </div>
-      </div>
-      <div style={{ width: "50%" }} className="flex justify-start">
-        <div className="px-1">
-          <Button
-            variant="outlined"
-            size="small"
-            startIcon={<WorkOutlineIcon />}
-            onClick={goToProject}
-          >
-            Projects
-          </Button>
-        </div>
-        <div className="px-1">
-          <a href={resumePDF} download="SHARAFATH ALI MAY CV.pdf">
-            <Button variant="outlined" size="small" endIcon={<DownloadIcon />}>
-              Resume
+    <div className="body-container">
+      <div className="profile-card">
+        <img src={Profile} alt="Profile" className="profile-pic" />
+        <div className="profile-info">
+          <p className="description">
+            MERN stack web developer with 1.5 years of experience, BCA from
+            Jamia Hamdard, Delhi.
+          </p>
+          <div className="buttons">
+            <Button
+              variant="contained"
+              size="medium"
+              startIcon={<WorkOutlineIcon />}
+              onClick={goToProject}
+              className="custom-button"
+            >
+              Projects
             </Button>
-          </a>
+            <a
+              href={resumePDF}
+              download="SHARAFATH ALI MAY CV.pdf"
+              className="custom-link"
+            >
+              <Button
+                variant="contained"
+                size="medium"
+                endIcon={<DownloadIcon />}
+                className="custom-button"
+              >
+                Resume
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
