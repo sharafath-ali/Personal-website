@@ -5,7 +5,7 @@
     align-items: center;
     padding: 20px;
     min-height: 80vh;
-    background-color: #C49E85;
+    background-color: #dbcbc1;
     /* Light background */
 }
 
@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #f2eae5;
     /* White background for the card */
     border-radius: 15px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -36,7 +36,7 @@
     border-radius: 50%;
     margin-right: 30px;
     object-fit: cover;
-    border: 4px solid #007bff;
+    border: 4px solid #333;
     /* Border around the image */
 }
 
@@ -63,7 +63,7 @@
 }
 
 .custom-button {
-    background-color: #007bff !important;
+    background-color: #333 !important;
     /* Primary color */
     color: #fff !important;
     padding: 10px 20px;
@@ -74,9 +74,10 @@
 }
 
 .custom-button:hover {
-    background-color: #0056b3 !important;
+    background-color: #1a1919 !important;
     /* Darker shade on hover */
     transform: translateY(-2px);
+    /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); */
     /* Slight lift effect */
 }
 
