@@ -1,0 +1,28 @@
+/* src/components/Contact.css */
+.contact-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--dark-brown);
+  margin-bottom: 20px;
+}
+
+.contact-header p {
+  margin-left: 10px;
+}
+
+.contact-form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
