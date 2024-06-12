@@ -56,7 +56,6 @@ function Resume() {
             <h4>Technologies</h4>
             <p>React, Node.js, MongoDB, etc.</p>
           </div>
-          {/* Add more skill cards as needed */}
         </div>
       </div>
 
