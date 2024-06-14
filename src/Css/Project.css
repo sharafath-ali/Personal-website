@@ -1,0 +1,43 @@
+/* src/components/Projects.css */
+.projects-page {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--light-brown);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects-page h2 {
+    text-align: center;
+    color: var(--dark-brown);
+    margin-bottom: 20px;
+}
+
+.project-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .projects-page {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+}

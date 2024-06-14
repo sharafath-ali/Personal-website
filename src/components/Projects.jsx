@@ -1,18 +1,24 @@
 import React from "react";
+import "../Css/Project.css";
 
 function Projects() {
   return (
-    <div className="min-h-screen">
-      <div className="flex justify-center items-center py-5 text-4xl font-black">
-        Projects
-      </div>
-      <div className="container mx-auto px-4">
-      <div className="border-solid border-2 border-slate-600 flex justify-center items-center py-3 my-4 ">
-        ssdsf
-      </div>
-      <div className="border-solid border-2 border-slate-600 flex justify-center items-center py-3 my-4">
-        dcfdfdscs
-      </div>
+    <div className="projects-page">
+      <h2>My Projects</h2>
+      <div className="project-cards">
+        <div className="project-card">
+          <h3>Project Title 1</h3>
+          <p>Project Description...</p>
+        </div>
+        <div className="project-card">
+          <h3>Project Title 2</h3>
+          <p>Project Description...</p>
+        </div>
+        <div className="project-card">
+          <h3>Project Title 3</h3>
+          <p>Project Description...</p>
+        </div>
+        {/* Add more project cards as needed */}
       </div>
     </div>
   );
