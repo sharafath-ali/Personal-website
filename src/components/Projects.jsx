@@ -45,6 +45,10 @@ const Projects = () => {
               comprehensive details about various films, powered by React, Sass,
               Material-UI, and the TMDB API
             </li>
+            <li>
+              Search Functionality : Utilizes debouncing to improve user
+              experience by limiting the number of API calls made while typing.
+            </li>
           </ul>
           <a
             href="https://github.com/sharafath-ali/Flim-flix"
