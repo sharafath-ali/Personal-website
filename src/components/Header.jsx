@@ -21,9 +21,7 @@ function Header() {
         <nav className="header-right">
           {isMobile ? (
             <div className="dropdown">
-              {dropdownOpen && (
                 <HeaderMenu/>
-              )}
             </div>
           ) : (
             <>
