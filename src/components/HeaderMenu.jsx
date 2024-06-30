@@ -1,7 +1,8 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import * as React from "react";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import { Link, useLocation } from "react-router-dom";
 
 export default function HeaderMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -9,6 +10,7 @@ export default function HeaderMenu() {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+  const { pathname } = useLocation();
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -17,9 +19,9 @@ export default function HeaderMenu() {
     <div>
       <Button
         id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
+        aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
+        aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
         Explore
@@ -30,13 +32,38 @@ export default function HeaderMenu() {
         open={open}
         onClose={handleClose}
         MenuListProps={{
-          'aria-labelledby': 'basic-button',
+          "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={handleClose}>ABOUT ME</MenuItem>
-        <MenuItem onClick={handleClose}>RESUME</MenuItem>
-        <MenuItem onClick={handleClose}>PROJECTS</MenuItem>
-        <MenuItem onClick={handleClose}>CONTACT</MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/" className={pathname === "/" ? "toblack" : ""}>
+            ABOUT ME
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link
+            to="/Resume"
+            className={pathname === "/Resume" ? "toblack" : ""}
+          >
+            RESUME
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link
+            to="/Projects"
+            className={pathname === "/Projects" ? "toblack" : ""}
+          >
+            PROJECTS
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link
+            to="/Projects"
+            className={pathname === "/Projects" ? "toblack" : ""}
+          >
+            PROJECTS
+          </Link>
+        </MenuItem>
       </Menu>
     </div>
   );
