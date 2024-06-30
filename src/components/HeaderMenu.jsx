@@ -58,10 +58,10 @@ export default function HeaderMenu() {
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <Link
-            to="/Projects"
-            className={pathname === "/Projects" ? "toblack" : ""}
+            to="/Contact"
+            className={pathname === "/Contact" ? "toblack" : ""}
           >
-            PROJECTS
+            CONTACT
           </Link>
         </MenuItem>
       </Menu>
