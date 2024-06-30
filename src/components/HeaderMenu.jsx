@@ -22,7 +22,7 @@ export default function HeaderMenu() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        Dashboard
+        Explore
       </Button>
       <Menu
         id="basic-menu"
@@ -33,9 +33,10 @@ export default function HeaderMenu() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem onClick={handleClose}>ABOUT ME</MenuItem>
+        <MenuItem onClick={handleClose}>RESUME</MenuItem>
+        <MenuItem onClick={handleClose}>PROJECTS</MenuItem>
+        <MenuItem onClick={handleClose}>CONTACT</MenuItem>
       </Menu>
     </div>
   );

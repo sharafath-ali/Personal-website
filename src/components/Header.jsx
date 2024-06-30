@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../Css/Header.css";
 import { ViewportContext } from "../Context/ViewportContext";
+import HeaderMenu from "./HeaderMenu";
 
 function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -20,38 +21,8 @@ function Header() {
         <nav className="header-right">
           {isMobile ? (
             <div className="dropdown">
-              <button onClick={toggleDropdown}>Menu</button>
               {dropdownOpen && (
-                <div className="dropdown-menu">
-                  <Link
-                    to="/"
-                    onClick={toggleDropdown}
-                    className={pathname === "/" ? "toblack" : ""}
-                  >
-                    ABOUT ME
-                  </Link>
-                  <Link
-                    to="/Resume"
-                    onClick={toggleDropdown}
-                    className={pathname === "/Resume" ? "toblack" : ""}
-                  >
-                    RESUME
-                  </Link>
-                  <Link
-                    to="/Projects"
-                    onClick={toggleDropdown}
-                    className={pathname === "/Projects" ? "toblack" : ""}
-                  >
-                    PROJECTS
-                  </Link>
-                  <Link
-                    to="/Contact"
-                    onClick={toggleDropdown}
-                    className={pathname === "/Contact" ? "toblack" : ""}
-                  >
-                    CONTACT
-                  </Link>
-                </div>
+                <HeaderMenu/>
               )}
             </div>
           ) : (
