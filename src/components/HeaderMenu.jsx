@@ -23,6 +23,7 @@ export default function HeaderMenu() {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
+        style={{ padding: "6px 10px", fontSize: "13px" }} 
       >
         Explore
       </Button>
