@@ -13,7 +13,7 @@ function Header() {
   };
   return (
     <>
-      <header className="header">
+      <header className="header" style={{ fontFamily: "'Poppins', sans-serif" }}>
         <div className="header-left">
           <h1>Sharafath Ali</h1>
           <p>Associate Software Developer</p>

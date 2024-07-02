@@ -6,7 +6,7 @@ import "../Css/Contact.css";
 
 const Contact = () => {
   return (
-    <div className="contact-page">
+    <div className="contact-page" style={{ fontFamily: "'Poppins', sans-serif" }}>
       <div className="contact-header">
         <MessageIcon />
         <p>Let's talk</p>

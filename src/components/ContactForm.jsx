@@ -73,7 +73,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-container">
+    <div className="contact-container" style={{ fontFamily: "'Poppins', sans-serif" }}>
       <h2>Contact Me</h2>
       <form onSubmit={onSaveClick} className="contact-form">
         <div className="form-group">

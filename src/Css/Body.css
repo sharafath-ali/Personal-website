@@ -3,41 +3,38 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 20px; /* Increased padding for better spacing */
     min-height: 80vh;
-    background-color: #fff;
-    /* Light background */
+    background-color: #fff; /* Light background */
+    font-family: 'Poppins', sans-serif; /* Font family */
 }
 
 .profile-card {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #f2eae5;
-    /* White background for the card */
+    background-color: #f2eae5; /* White background for the card */
     border-radius: 15px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    /* Softer shadow */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Softer, larger shadow */
     padding: 40px;
     max-width: 900px;
     width: 100%;
     margin: 20px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .profile-card:hover {
-    transform: translateY(-10px);
-    /* Lift effect on hover */
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
 }
 
 .profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
     margin-right: 30px;
     object-fit: cover;
-    border: 3px solid #333;
-    /* Border around the image */
+    border: 3px solid #333; /* Border around the image */
 }
 
 .profile-info {
@@ -45,45 +42,67 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    color: #333; /* Text color */
 }
 
 .profile-info .description {
     margin: 0 0 20px 0;
     font-size: 18px;
-    color: #333;
-    line-height: 1.5;
-    /* Better readability */
+    line-height: 1.6; /* Improved readability */
+}
+
+.skills {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.skills li {
+    margin-bottom: 10px;
+    font-size: 16px; /* Slightly smaller text */
+}
+
+.skills strong {
+    color:  #333;
+}
+
+.portfolio {
+    font-size: 16px; /* Slightly smaller text */
+    margin-bottom: 20px;
+}
+
+.portfolio a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.portfolio a:hover {
+    text-decoration: underline;
 }
 
 .buttons {
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    /* Space between buttons */
+    gap: 15px; /* Increased space between buttons */
 }
 
 .custom-button {
-    background-color: #333 !important;
-    /* Primary color */
+    background-color: #333 !important; /* Primary color */
     color: #fff !important;
     padding: 10px 20px;
-    text-transform: none;
-    /* Disable uppercase transformation */
-    transition: background-color 0.3s, transform 0.3s;
-    /* Smooth transitions */
+    text-transform: none; /* Disable uppercase transformation */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Button shadow */
 }
 
 .custom-button:hover {
-    background-color: #1a1919 !important;
-    /* Darker shade on hover */
-    transform: translateY(-2px);
-    /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); */
-    /* Slight lift effect */
+    background-color: #1a1919 !important; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
 .custom-link {
-    text-decoration: none;
-    /* Remove underline */
+    text-decoration: none; /* Remove underline */
 }
 
 @media (max-width: 768px) {
@@ -100,6 +119,5 @@
     .buttons {
         flex-direction: column;
         gap: 10px;
-        /* Space between buttons in column layout */
     }
 }

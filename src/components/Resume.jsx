@@ -2,7 +2,7 @@ import React from "react";
 import "../Css/Resume.css";
 function Resume() {
   return (
-    <div className="resume-page">
+    <div className="resume-page" style={{ fontFamily: "'Poppins', sans-serif" }}>
       <h2>My Resume</h2>
       <div className="resume-section">
         <h3>Experience</h3>

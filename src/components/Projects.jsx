@@ -4,7 +4,7 @@ import "../Css/Project.css";
 
 const Projects = () => {
   return (
-    <div className="projects-page">
+    <div className="projects-page" style={{ fontFamily: "'Poppins', sans-serif" }}>
       <h2>My Projects</h2>
       <div className="project-cards">
         <div className="project-card">

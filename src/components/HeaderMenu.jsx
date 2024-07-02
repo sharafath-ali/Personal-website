@@ -16,7 +16,7 @@ export default function HeaderMenu() {
   };
 
   return (
-    <div>
+    <div style={{ fontFamily: "'Poppins', sans-serif" }}>
       <Button
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
