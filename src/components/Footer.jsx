@@ -12,7 +12,7 @@ function Footer() {
     <>
       <footer className="footer" style={{ fontFamily: "'Poppins', sans-serif" }}> 
         <div className="footer-left">
-          <p>© 2024 by Sharafath Ali</p>
+          <p>© 2024 All rights reserved | Made with ❤️ by Sharafath Ali</p>
         </div>
         <div className="footer-right">
           <a
