@@ -29,24 +29,24 @@ function Body() {
           </p>
           <ul className="skills">
             <li>
-              <strong>JavaScript, React, Node.js:</strong> Creating interactive
-              web applications.
+              <strong>JavaScript, React, Node.js:</strong> Building dynamic web
+              apps.
             </li>
             <li>
               <strong>MongoDB, Express.js:</strong> Handling data and server
               authentication.
             </li>
             <li>
-              <strong>Git:</strong> Version control and team collaboration.
+              <strong>Git:</strong> Seamless version control and collaboration
             </li>
             <li>
-              <strong>Familiar with:</strong> Linux, Deployment
+              <strong>Familiar with:</strong> Linux, Deployment.
             </li>
           </ul>
           <p className="portfolio">
             🌐{" "}
             <a
-              href="https://github.com/"
+              href="https://github.com/sharafath-ali/"
               target="_blank"
               rel="noopener noreferrer"
             >
