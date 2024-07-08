@@ -20,6 +20,8 @@ const ContactForm = () => {
     message: "",
   });
 
+  const [successMessage, setSuccessMessage] = useState("");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -55,9 +57,11 @@ const ContactForm = () => {
             subject: "",
             message: "",
           });
+          setSuccessMessage("Email was sent successfully!");
         }
       } catch (error) {
         console.log(error);
+        setSuccessMessage("error while sending email. try again 😒");
       }
     }
   };
@@ -73,7 +77,10 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-container" style={{ fontFamily: "'Poppins', sans-serif" }}>
+    <div
+      className="contact-container"
+      style={{ fontFamily: "'Poppins', sans-serif" }}
+    >
       <h2>Contact Me</h2>
       <form onSubmit={onSaveClick} className="contact-form">
         <div className="form-group">
@@ -135,6 +142,7 @@ const ContactForm = () => {
           {error.message && <span className="error-text">{error.message}</span>}
         </div>
         <button type="submit">Submit</button>
+        {successMessage && <p className="success-message">{successMessage}</p>}
       </form>
     </div>
   );
