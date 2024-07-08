@@ -1,5 +1,6 @@
 import React from "react";
 import "../Css/Resume.css";
+import resumePDF from "../Assets/resume.pdf";
 
 function Resume() {
   return (
@@ -77,12 +78,9 @@ function Resume() {
       </div>
 
       <div className="resume-section">
-        <button
-          className="download-button"
-          onClick={() => window.open("/path/to/resume.pdf")}
-        >
-          Download Resume
-        </button>
+        <a href={resumePDF} download="SHARAFATH ALI MAY CV.pdf">
+          <button className="download-button">Download Resume</button>
+        </a>
       </div>
     </div>
   );
