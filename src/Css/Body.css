@@ -88,6 +88,8 @@
 
 .custom-button {
     background-color: #333 !important; /* Primary color */
+    height: 40px;
+    width: 150px;
     color: #fff !important;
     padding: 10px 20px;
     text-transform: none; /* Disable uppercase transformation */

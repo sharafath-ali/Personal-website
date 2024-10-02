@@ -49,9 +49,9 @@ function Body() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Portfolio
+              Dive into my GitHub
             </a>
-            : Check out my work on GitHub to see my coding style and projects.
+             {" " + "to explore projects that showcase my passion and expertise. Let the code speak for itself!"}
           </p>
           <div className="buttons">
             <Button
