@@ -15,7 +15,7 @@ function Resume() {
           <div className="card">
             <h4>Associate Software Engineer</h4>
             <p>Global Infonet Inc, Kochi</p>
-            <p>September 2023 - Present (10 months)</p>
+            <p>September 2023 - October 2024 (1 year and 1 month)</p>
           </div>
           <div className="card">
             <h4>Associate Software Engineer Trainee</h4>
@@ -49,27 +49,32 @@ function Resume() {
       <div className="resume-section">
         <h3>Skills</h3>
         <div className="skills-grid">
-          {[
-            "React.Js",
+          {["React.Js",
             "Node (Node Js)",
             "Express (Express Js)",
-            "SHARE POINT FRAMEWORK",
             "JavaScript",
             "TypeScript",
-            "Redux-Toolkit",
             "MongoDB",
-            "Material-UI, Chakra-UI, React-Bootstrap",
+            "Mongoose",
             "Git",
             "Postman",
-            "Azure Devops",
+            "Redux-Toolkit",
+            "jsonwebtoken (JWT-based authentication)",
+            "bcrypt (Secure password hashing)",
+            "REST APIs",
+            "Model–View–Controller (MVC)",
+            "Azure DevOps",
+            "Socket.IO",
+            "SHARE POINT FRAMEWORK",
+            "Server-Side Rendering (SSR) with EJS",
             "GitHub",
             "React Router",
+            "Material-UI, Chakra-UI, React-Bootstrap",
             "Styled Components - Sass",
             "Microsoft Windows Series, Linux",
             "HTML, CSS",
             "Problem-Solving",
-            "Strong Communication",
-          ].map((skill) => (
+            "Strong Communication"].map((skill) => (
             <div key={skill} className="skill-chip">
               {skill}
             </div>
