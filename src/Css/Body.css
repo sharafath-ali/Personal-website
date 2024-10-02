@@ -1,40 +1,52 @@
-/* src/Css/Body.css */
 .body-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px; /* Increased padding for better spacing */
+    padding: 20px;
+    /* Increased padding for better spacing */
     min-height: 80vh;
-    background-color: #fff; /* Light background */
-    font-family: 'Poppins', sans-serif; /* Font family */
+    background-color: #fff;
+    /* Light background */
+    font-family: 'Poppins', sans-serif;
+    /* Font family */
 }
 
 .profile-card {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #f2eae5; /* White background for the card */
+    background-color: #f2eae5;
+    /* Card background color */
     border-radius: 15px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Softer, larger shadow */
-    padding: 40px;
-    max-width: 900px;
-    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    /* Softer, larger shadow */
+    padding: 60px;
+    /* Increased padding for better spacing */
+    max-width: 1000px;
+    /* Increased width for better appearance */
+    width: 90%;
+    /* Adjusted width to take more space */
     margin: 20px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .profile-card:hover {
-    transform: translateY(-10px); /* Lift effect on hover */
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+    transform: translateY(-10px);
+    /* Lift effect on hover */
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+    /* Stronger shadow on hover */
 }
 
 .profile-pic {
-    width: 240px;
-    height: 240px;
+    width: 200px;
+    /* Adjusted size */
+    height: 200px;
+    /* Adjusted size */
     border-radius: 50%;
     margin-right: 30px;
     object-fit: cover;
-    border: 3px solid #333; /* Border around the image */
+    border: 3px solid #333;
+    /* Border around the image */
 }
 
 .profile-info {
@@ -42,33 +54,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    color: #333; /* Text color */
+    color: #333;
+    /* Text color */
 }
 
 .profile-info .description {
-    margin: 0 0 20px 0;
-    font-size: 18px;
-    line-height: 1.6; /* Improved readability */
-}
-
-.skills {
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: 20px;
-}
-
-.skills li {
-    margin-bottom: 10px;
-    font-size: 16px; /* Slightly smaller text */
-}
-
-.skills strong {
-    color:  #333;
+    margin: 0 0 10px 0;
+    /* Adjusted margin */
+    font-size: 16px;
+    /* Slightly smaller font size */
+    line-height: 1.5;
+    /* Improved readability */
 }
 
 .portfolio {
-    font-size: 16px; /* Slightly smaller text */
-    margin-bottom: 20px;
+    font-size: 14px;
+    /* Slightly smaller font size */
+    margin: 10px 0;
+    /* Add margin for spacing */
 }
 
 .portfolio a {
@@ -83,34 +86,46 @@
 .buttons {
     display: flex;
     flex-direction: row;
-    gap: 15px; /* Increased space between buttons */
+    gap: 15px;
+    /* Increased space between buttons */
 }
 
 .custom-button {
-    background-color: #333 !important; /* Primary color */
-    /* height: 40px; */
+    background-color: #333 !important;
+    /* Primary color */
     width: 150px;
     color: #fff !important;
     padding: 10px 20px;
-    text-transform: none; /* Disable uppercase transformation */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Button shadow */
+    text-transform: none;
+    /* Disable uppercase transformation */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Smooth transitions */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Button shadow */
 }
 
 .custom-button:hover {
-    background-color: #1a1919 !important; /* Darker shade on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    background-color: #1a1919 !important;
+    /* Darker shade on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect */
 }
 
 .custom-link {
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
+    /* Remove underline */
 }
 
 @media (max-width: 768px) {
     .profile-card {
         flex-direction: column;
         align-items: center;
+        padding: 30px;
+        /* Adjusted padding for smaller screens */
+        max-width: 90%;
+        /* Reduced width on smaller screens */
     }
 
     .profile-pic {
