@@ -23,11 +23,10 @@ function Body() {
         <img src={Profile} alt="Profile" className="profile-pic" />
         <div className="profile-info">
           <p className="description">
-            👋 Hello! I'm Sharafath Ali, a passionate Fullstack JavaScript
-            developer specializing in the MERN stack. I love building dynamic
-            web applications using modern technologies.
+            👋 Hello! I'm Sharafath Ali -             A passionate Fullstack Web Developer with 1.6 years of experience specializing in the MERN stack.
+ My journey into coding began unexpectedly after college when I discovered my love for web development during my time at Brototype. Initially unfamiliar with the world of web and mobile development, I quickly found my stride through self-learning and haven’t looked back since.
           </p>
-          <ul className="skills">
+          {/* <ul className="skills">
             <li>
               <strong>JavaScript, React, Node.js:</strong> Building dynamic web
               apps.
@@ -42,7 +41,7 @@ function Body() {
             <li>
               <strong>Familiar with:</strong> Linux, Deployment.
             </li>
-          </ul>
+          </ul> */}
           <p className="portfolio">
             🌐{" "}
             <a
