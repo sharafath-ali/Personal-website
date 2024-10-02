@@ -16,10 +16,13 @@
 .resume-page h2 {
     text-align: center;
     color: var(--dark-brown);
+    margin-bottom: 20px;
+    /* Added margin for spacing */
 }
 
 .resume-section {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    /* Reduced margin for compactness */
 }
 
 .resume-section h3 {
@@ -32,41 +35,75 @@
 .resume-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
+    /* Adjusted gap for a tighter layout */
 }
 
 .card {
     background-color: var(--white);
-    padding: 20px;
+    padding: 15px;
+    /* Reduced padding */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(33% - 40px);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 30px);
+    /* Adjusted for two cards per row */
     min-width: 200px;
-    max-width: 300px;
+    max-width: 280px;
+    /* Slightly narrower max-width */
     transition: transform 0.3s ease-in-out;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
+    /* Slightly reduced hover effect */
 }
 
-.card h4 {
-    margin-top: 0;
+.job-title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    /* Slightly smaller for compactness */
     color: var(--dark-brown);
+}
+
+.company-name {
+    margin: 3px 0;
+    font-weight: normal;
+    font-size: 0.95rem;
+    /* Slightly smaller size */
+    color: #555;
+}
+
+.employment-dates {
+    margin: 3px 0;
+    font-size: 0.9rem;
+    /* Smaller size for a cleaner look */
+    color: #777;
+    /* Gray color */
+}
+
+.employment-duration {
+    margin: 0;
+    font-size: 0.85rem;
+    /* Even smaller size */
+    color: #888;
 }
 
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
+    /* Reduced gap */
 }
 
 .skill-chip {
     background-color: var(--dark-brown);
     color: var(--white);
-    padding: 10px 15px;
+    padding: 8px 12px;
+    /* Reduced padding */
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 12px;
+    /* Smaller font size */
     transition: background-color 0.3s, transform 0.3s;
     cursor: default;
 }
