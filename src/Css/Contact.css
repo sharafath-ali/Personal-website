@@ -1,28 +1,36 @@
-/* src/components/Contact.css */
-.contact-page {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
 .contact-header {
   display: flex;
   align-items: center;
-  font-size: 2rem;
+  justify-content: center;
+  font-size: 1.5rem;
   font-weight: bold;
   color: var(--dark-brown);
-  margin-bottom: 20px;
+  margin: 20px 0 20px;
+  /* Increased top margin for more space */
+  gap: 8px;
 }
 
 .contact-header p {
-  margin-left: 10px;
+  font-size: 1.5rem;
 }
 
-.contact-form-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+.contact-header svg {
+  font-size: 1.8rem;
+  color: var(--dark-brown);
+}
+
+@media (max-width: 768px) {
+  .contact-header {
+    font-size: 1.2rem;
+    margin: 30px 0 15px;
+    /* Adjusted margin for smaller screens */
+  }
+
+  .contact-header svg {
+    font-size: 1.5rem;
+  }
+
+  .contact-header p {
+    font-size: 1.2rem;
+  }
 }
