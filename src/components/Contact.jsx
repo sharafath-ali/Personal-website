@@ -9,7 +9,7 @@ const Contact = () => {
     <div className="contact-page" style={{ fontFamily: "'Poppins', sans-serif" }}>
       <div className="contact-header">
         <MessageIcon />
-        <p>Let's talk</p>
+        <p>Contact Me</p>
       </div>
       <div className="contact-form-container">
         <Form />

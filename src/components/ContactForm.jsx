@@ -81,7 +81,7 @@ const ContactForm = () => {
       className="contact-container"
       style={{ fontFamily: "'Poppins', sans-serif" }}
     >
-      <h2>Contact Me</h2>
+      {/* <h2>Contact Me</h2> */}
       <form onSubmit={onSaveClick} className="contact-form">
         <div className="form-group">
           <label htmlFor="firstName">First Name</label>
