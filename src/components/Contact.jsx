@@ -1,7 +1,6 @@
 import React from "react";
 import Form from "./ContactForm";
 import MessageIcon from "@mui/icons-material/Message";
-import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
 import "../Css/Contact.css";
 
 const Contact = () => {
