@@ -7,6 +7,42 @@ const Projects = () => {
       <h2>My Projects</h2>
       <div className="project-cards">
         <div className="project-card">
+          <h3>NexBuy</h3>
+          <ul>
+            <li>
+              NexBuy is an advanced e-commerce platform designed to deliver a seamless online shopping experience. The app features user authentication, product listings, shopping cart management, and secure online payments via Stripe.
+            </li>
+            <li>
+              The backend is built with Node.js, Express.js, and MongoDB for robust data management, while Redis is used for efficient caching.
+            </li>
+            <li>
+              The frontend is developed using React.js, TailwindCSS, and Zustand for state management, delivering a fast and responsive user interface.
+            </li>
+            <li>
+              Integration with Cloudinary ensures smooth image uploads, and the platform is fully optimized for scalability and high performance.
+            </li>
+          </ul>
+          <div className="project-links">
+            <a
+              href="https://github.com/sharafath-ali/NexBuy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-link"
+            >
+              View on GitHub
+            </a>
+            <a
+              href="https://nexbuy.onrender.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="site-link"
+            >
+              See It Live
+            </a>
+          </div>
+        </div>
+
+        <div className="project-card">
           <h3>HR-PORTAL App</h3>
           <ul>
             <li>
