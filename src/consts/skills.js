@@ -23,4 +23,9 @@ export const Skills= ["React.Js",
   "Microsoft Windows Series, Linux",
   "HTML, CSS",
   "Problem-Solving",
-  "Strong Communication"]
+  "Strong Communication",
+  "Zustand",
+  "TailwindCSS",
+  "Framer Motion",
+  "React Query",
+]
