@@ -41,6 +41,51 @@ function ProjectCards() {
       </div>
 
       <div className="project-card">
+        <h3>Chatterverse | MERN Stack App</h3>
+        <ul>
+          <li>
+            Chatterverse is a real-time chat application built on a monorepo architecture with a clean directory structure, integrating Express.js for the backend and React.js for the frontend, with state management powered by Zustand.
+          </li>
+          <li>
+            Deployed the application on Render with MongoDB Atlas as the database. Enabled real-time messaging using Socket.IO, supporting text and image messages between users.
+          </li>
+          <li>
+            Implemented secure user authentication with JWT, ensuring robust login/signup functionality.
+          </li>
+          <li>
+            Added a theme customization feature with DaisyUI, allowing users to switch between 32 available themes for a personalized app experience.
+          </li>
+          <li>
+            Developed a profile management section for users to view and update their profile picture and user details.
+          </li>
+          <li>
+            Integrated Cloudinary for secure and efficient media uploads.
+          </li>
+          <li>
+            Built a responsive and dynamic UI using Tailwind CSS and DaisyUI, ensuring compatibility across all device sizes.
+          </li>
+        </ul>
+        <div className="project-links">
+          <a
+            href="https://github.com/sharafath-ali/Chatterverse"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github-link"
+          >
+            View on GitHub
+          </a>
+          <a
+            href="https://chatterverse-0hba.onrender.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="site-link"
+          >
+            See It Live
+          </a>
+        </div>
+      </div>
+
+      <div className="project-card">
         <h3>HR-PORTAL App</h3>
         <ul>
           <li>
@@ -71,7 +116,7 @@ function ProjectCards() {
             View on GitHub
           </a>
           <a
-            href="https://node-react-hr-portal.vercel.app/" // Replace with your actual link
+            href="https://node-react-hr-portal.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="site-link"
