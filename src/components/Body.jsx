@@ -61,9 +61,17 @@ function Body() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Dive into my GitHub
+                Explore my GitHub
               </a>
-              {" " + "to explore projects that showcase my passion and expertise. Let the code speak for itself!"}
+              {" to dive into a world of code where creativity meets functionality. ✍️ For stories behind the code and valuable insights, "}
+              <a
+                href="https://sharafath.hashnode.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                visit my Hashnode blog
+              </a>
+              {" and discover my journey, lessons learned, and tips for aspiring developers!"}
             </p>
           </motion.div>
           <motion.div
