@@ -14,7 +14,8 @@ const categoryClass = {
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.2 },
   transition: { duration: 0.5, delay, ease: "easeOut" },
 });
 
@@ -83,7 +84,8 @@ function Resume() {
             key={category}
             className="skill-category"
             initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.4, delay: 0.35 + catIdx * 0.08 }}
           >
             <p className="skill-category-label">{category}</p>
@@ -93,7 +95,8 @@ function Resume() {
                   key={skill.label}
                   className={`skill-chip ${categoryClass[category]}`}
                   initial={{ opacity: 0, scale: 0.85 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.3, delay: 0.4 + catIdx * 0.08 + i * 0.03 }}
                 >
                   {skill.emoji} {skill.label}

@@ -1,15 +1,42 @@
-import React, { useContext, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useContext, useState, useEffect } from "react";
 import "../Css/Header.css";
 import { ViewportContext } from "../Context/ViewportContext";
 import HeaderMenu from "./HeaderMenu";
 import { motion } from "framer-motion";
 
+const NAV_LINKS = [
+  { label: "About Me", href: "#about" },
+  { label: "Resume", href: "#resume" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
+
 function Header() {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const { pathname } = useLocation();
   const { isMobile } = useContext(ViewportContext);
-  const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
+  const [active, setActive] = useState("about");
+
+  useEffect(() => {
+    const sections = NAV_LINKS.map(({ href }) =>
+      document.getElementById(href.replace("#", ""))
+    ).filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px" }
+    );
+
+    sections.forEach((s) => observer.observe(s));
+    return () => sections.forEach((s) => observer.unobserve(s));
+  }, []);
+
+  const scrollTo = (e, href) => {
+    e.preventDefault();
+    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <motion.header
@@ -25,15 +52,19 @@ function Header() {
       <nav className="header-right">
         {isMobile ? (
           <div className="dropdown">
-            <HeaderMenu />
+            <HeaderMenu active={active} onNav={scrollTo} links={NAV_LINKS} />
           </div>
         ) : (
-          <>
-            <Link to="/" className={pathname === "/" ? "toblack" : ""}>About Me</Link>
-            <Link to="/Resume" className={pathname === "/Resume" ? "toblack" : ""}>Resume</Link>
-            <Link to="/Projects" className={pathname === "/Projects" ? "toblack" : ""}>Projects</Link>
-            <Link to="/Contact" className={pathname === "/Contact" ? "toblack" : ""}>Contact</Link>
-          </>
+          NAV_LINKS.map(({ label, href }) => (
+            <a
+              key={href}
+              href={href}
+              className={active === href.replace("#", "") ? "toblack" : ""}
+              onClick={(e) => scrollTo(e, href)}
+            >
+              {label}
+            </a>
+          ))
         )}
       </nav>
     </motion.header>

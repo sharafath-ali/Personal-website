@@ -55,7 +55,8 @@ function ProjectCards() {
     <div className="projects-page">
       <motion.div
         initial={{ opacity: 0, y: -18 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.5 }}
       >
         <h2>Projects</h2>
@@ -68,7 +69,8 @@ function ProjectCards() {
             key={proj.title}
             className="project-card"
             initial={{ opacity: 0, y: 28 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.45, delay: 0.1 + i * 0.1 }}
             whileHover={{ y: -6 }}
           >

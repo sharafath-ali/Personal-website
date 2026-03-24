@@ -55,7 +55,8 @@ const ContactForm = () => {
     <div className="contact-container">
       <motion.div
         initial={{ opacity: 0, y: -18 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.5 }}
       >
         <h2>Contact Me</h2>
@@ -66,7 +67,8 @@ const ContactForm = () => {
         onSubmit={onSaveClick}
         className="contact-form"
         initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5, delay: 0.15 }}
       >
         <div className="form-row">
