@@ -3,6 +3,7 @@ import axios from "axios";
 import "../Css/ContactForm.css";
 import SendIcon from "@mui/icons-material/Send";
 import { motion } from "framer-motion";
+import toast from "react-hot-toast";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +12,6 @@ const ContactForm = () => {
   const [error, setError] = useState({
     firstName: "", lastName: "", email: "", subject: "", message: "",
   });
-  const [successMessage, setSuccessMessage] = useState("");
   const [sending, setSending] = useState(false);
 
   const handleChange = (e) => {
@@ -42,10 +42,10 @@ const ContactForm = () => {
       const response = await axios.post("https://formspree.io/f/xjvnzdjp", formData);
       if (response?.status === 200) {
         setFormData({ firstName: "", lastName: "", email: "", subject: "", message: "" });
-        setSuccessMessage("✅ Message sent successfully! I'll get back to you soon.");
+        toast.success("Message sent! I'll get back to you soon.");
       }
     } catch {
-      setSuccessMessage("❌ Error sending message. Please try again.");
+      toast.error("Failed to send. Please try again.");
     } finally {
       setSending(false);
     }
@@ -142,8 +142,6 @@ const ContactForm = () => {
         <button type="submit" className="submit-btn" disabled={sending}>
           {sending ? "Sending..." : <><SendIcon style={{ fontSize: "1.1rem" }} /> Send Message</>}
         </button>
-
-        {successMessage && <p className="success-message">{successMessage}</p>}
       </motion.form>
     </div>
   );
