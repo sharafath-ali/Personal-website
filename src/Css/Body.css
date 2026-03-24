@@ -184,13 +184,24 @@
 
 /* ── RESPONSIVE ─────────────────────────────────────── */
 @media (max-width: 768px) {
+  .body-container {
+    padding: 5rem 1.5rem 3rem;
+    min-height: 100svh;
+  }
   .profile-card {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    gap: 2.5rem;
+    gap: 2rem;
   }
-  .hero-name { font-size: 2rem; }
-  .avatar-ring { width: 160px; height: 160px; }
+  .avatar-wrapper {
+    padding-top: 0;
+  }
+  .hero-name { font-size: 2.1rem; }
+  .hero-role { font-size: 0.92rem; }
+  .avatar-ring { width: 150px; height: 150px; }
   .social-links, .buttons { justify-content: center; }
-  .description { font-size: 0.9rem; }
+  .description { font-size: 0.9rem; max-width: 100%; }
+  .buttons { flex-direction: column; align-items: center; }
+  .btn-primary, .btn-outline { width: 100%; max-width: 280px; }
 }
