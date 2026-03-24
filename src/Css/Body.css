@@ -1,140 +1,184 @@
+/* ── BODY / HERO ────────────────────────────────────── */
 .body-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    /* Increased padding for better spacing */
-    min-height: 80vh;
-    background-color: #fff;
-    /* Light background */
-    font-family: 'Poppins', sans-serif;
-    /* Font family */
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
 }
 
 .profile-card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: #f2eae5;
-    /* Card background color */
-    border-radius: 15px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    /* Softer, larger shadow */
-    padding: 60px;
-    /* Increased padding for better spacing */
-    max-width: 1000px;
-    /* Increased width for better appearance */
-    width: 90%;
-    /* Adjusted width to take more space */
-    margin: 20px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: 980px;
+  width: 100%;
 }
 
-.profile-card:hover {
-    transform: translateY(-10px);
-    /* Lift effect on hover */
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
-    /* Stronger shadow on hover */
+/* ── AVATAR ─────────────────────────────────────────── */
+.avatar-wrapper {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.avatar-ring {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  padding: 4px;
+  background: var(--accent-gradient);
+  animation: float 4s ease-in-out infinite;
+  box-shadow: 0 0 40px rgba(108, 99, 255, 0.35);
 }
 
 .profile-pic {
-    width: 200px;
-    /* Adjusted size */
-    height: 200px;
-    /* Adjusted size */
-    border-radius: 50%;
-    margin-right: 30px;
-    object-fit: cover;
-    border: 3px solid #333;
-    /* Border around the image */
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 3px solid var(--bg-primary);
 }
 
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ── TEXT SIDE ──────────────────────────────────────── */
 .profile-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    color: #333;
-    /* Text color */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
 }
 
-.profile-info .description {
-    margin: 0 0 10px 0;
-    /* Adjusted margin */
-    font-size: 16px;
-    /* Slightly smaller font size */
-    line-height: 1.5;
-    /* Improved readability */
+.hero-greeting {
+  font-size: 1rem;
+  color: var(--accent-primary);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.portfolio {
-    font-size: 14px;
-    /* Slightly smaller font size */
-    margin: 10px 0;
-    /* Add margin for spacing */
+.hero-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.portfolio a {
-    color: #007bff;
-    text-decoration: none;
+.hero-role {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-weight: 500;
 }
 
-.portfolio a:hover {
-    text-decoration: underline;
+.description {
+  font-size: 0.97rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 560px;
 }
 
+/* ── SOCIAL LINKS ───────────────────────────────────── */
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.social-pill:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+  background: rgba(108, 99, 255, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(108, 99, 255, 0.2);
+}
+
+/* ── BUTTONS ────────────────────────────────────────── */
 .buttons {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    /* Increased space between buttons */
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
 }
 
-.custom-button {
-    background-color: #333 !important;
-    /* Primary color */
-    width: 150px;
-    color: #fff !important;
-    padding: 10px 20px;
-    text-transform: none;
-    /* Disable uppercase transformation */
-    transition: background-color 0.3s, transform 0.3s;
-    /* Smooth transitions */
-    border-radius: 8px;
-    /* Rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    /* Button shadow */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.75rem;
+  border-radius: var(--radius-md);
+  background: var(--accent-gradient);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  box-shadow: 0 4px 20px rgba(108, 99, 255, 0.3);
+  letter-spacing: 0.3px;
 }
 
-.custom-button:hover {
-    background-color: #1a1919 !important;
-    /* Darker shade on hover */
-    transform: translateY(-2px);
-    /* Slight lift effect */
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(108, 99, 255, 0.45);
+  filter: brightness(1.1);
 }
 
-.custom-link {
-    text-decoration: none;
-    /* Remove underline */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.75rem;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 1.5px solid var(--accent-primary);
+  cursor: pointer;
+  transition: all var(--transition);
+  letter-spacing: 0.3px;
 }
 
+.btn-outline:hover {
+  background: rgba(108, 99, 255, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 22px rgba(108, 99, 255, 0.2);
+}
+
+.custom-link { text-decoration: none; }
+
+/* ── RESPONSIVE ─────────────────────────────────────── */
 @media (max-width: 768px) {
-    .profile-card {
-        flex-direction: column;
-        align-items: center;
-        padding: 30px;
-        /* Adjusted padding for smaller screens */
-        max-width: 90%;
-        /* Reduced width on smaller screens */
-    }
-
-    .profile-pic {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+  }
+  .hero-name { font-size: 2rem; }
+  .avatar-ring { width: 160px; height: 160px; }
+  .social-links, .buttons { justify-content: center; }
+  .description { font-size: 0.9rem; }
 }

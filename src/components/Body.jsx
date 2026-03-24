@@ -1,111 +1,96 @@
 import React from "react";
-import Button from "@mui/material/Button";
-import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
-import DownloadIcon from "@mui/icons-material/Download";
 import Profile from "../Assets/profile.jpg";
 import { useNavigate } from "react-router-dom";
 import resumePDF from "../Assets/resume.pdf";
 import "../Css/Body.css";
 import { motion } from "framer-motion";
 
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 24 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.55, delay, ease: "easeOut" },
+});
+
 function Body() {
   const navigate = useNavigate();
 
-  const goToProject = () => {
-    navigate("/Projects");
-  };
-
   return (
-    <div
-      className="body-container"
-      style={{ fontFamily: "'Poppins', sans-serif" }}
-    >
+    <div className="body-container">
       <div className="profile-card">
-        <img src={Profile} alt="Profile" className="profile-pic" />
+
+        {/* Avatar */}
+        <motion.div
+          className="avatar-wrapper"
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <div className="avatar-ring">
+            <img src={Profile} alt="Sharafath Ali" className="profile-pic" />
+          </div>
+        </motion.div>
+
+        {/* Text */}
         <div className="profile-info">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <p className="description">
-              👋 Hello! I'm Sharafath Ali -             A passionate Fullstack Web Developer with 1.6 years of experience specializing in the MERN stack.
-              My journey into coding began unexpectedly after college when I discovered my love for web development during my time at Brototype. Initially unfamiliar with the world of web and mobile development, I quickly found my stride through self-learning and haven’t looked back since.
-            </p>
+          <motion.p className="hero-greeting" {...fadeUp(0.1)}>
+            👋 Welcome to my portfolio
+          </motion.p>
+
+          <motion.h1 className="hero-name" {...fadeUp(0.2)}>
+            Sharafath Ali
+          </motion.h1>
+
+          <motion.p className="hero-role" {...fadeUp(0.3)}>
+            Fullstack Web Developer — MERN Stack
+          </motion.p>
+
+          <motion.p className="description" {...fadeUp(0.4)}>
+            Passionate developer with 1.6+ years of experience building scalable
+            full-stack web apps. My journey started at Brototype and I haven't
+            stopped shipping since. I love turning ideas into polished products.
+          </motion.p>
+
+          {/* Social links */}
+          <motion.div className="social-links" {...fadeUp(0.5)}>
+            <a
+              href="https://github.com/sharafath-ali/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-pill"
+            >
+              🐙 GitHub
+            </a>
+            <a
+              href="https://sharafath.hashnode.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-pill"
+            >
+              ✍️ Hashnode Blog
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sharafathalivk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-pill"
+            >
+              💼 LinkedIn
+            </a>
           </motion.div>
-          {/* <ul className="skills">
-            <li>
-              <strong>JavaScript, React, Node.js:</strong> Building dynamic web
-              apps.
-            </li>
-            <li>
-              <strong>MongoDB, Express.js:</strong> Handling data and server
-              authentication.
-            </li>
-            <li>
-              <strong>Git:</strong> Seamless version control and collaboration
-            </li>
-            <li>
-              <strong>Familiar with:</strong> Linux, Deployment.
-            </li>
-          </ul> */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <p className="portfolio">
-              🌐{" "}
-              <a
-                href="https://github.com/sharafath-ali/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Explore my GitHub
-              </a>
-              {" to dive into a world of code where creativity meets functionality. ✍️ For stories behind the code and valuable insights, "}
-              <a
-                href="https://sharafath.hashnode.dev/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                visit my Hashnode blog
-              </a>
-              {" and discover my journey, lessons learned, and tips for aspiring developers!"}
-            </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            <div className="buttons">
-              <Button
-                variant="contained"
-                size="medium"
-                startIcon={<WorkOutlineIcon />}
-                onClick={goToProject}
-                className="custom-button"
-              >
-                Projects
-              </Button>
-              <a
-                href={resumePDF}
-                download="SHARAFATH ALI MAY CV.pdf"
-                className="custom-link"
-              >
-                <Button
-                  variant="contained"
-                  size="medium"
-                  endIcon={<DownloadIcon />}
-                  className="custom-button"
-                >
-                  Resume
-                </Button>
-              </a>
-            </div>
+
+          {/* CTA Buttons */}
+          <motion.div className="buttons" {...fadeUp(0.6)}>
+            <button className="btn-primary" onClick={() => navigate("/Projects")}>
+              🚀 View Projects
+            </button>
+            <a href={resumePDF} download="SHARAFATH ALI MAY CV.pdf" className="custom-link">
+              <button className="btn-outline">
+                📄 Download Resume
+              </button>
+            </a>
           </motion.div>
         </div>
+
       </div>
     </div>
   );

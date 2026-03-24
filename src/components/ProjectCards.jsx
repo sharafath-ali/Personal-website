@@ -1,197 +1,110 @@
 import React from 'react';
 import "../Css/Project.css";
+import { motion } from "framer-motion";
+
+const projects = [
+  {
+    icon: "🛒",
+    title: "NexBuy",
+    description:
+      "Advanced e-commerce platform with user auth, product listings, cart management, and secure Stripe payments. Backend: Node.js + Express + MongoDB + Redis. Frontend: React + TailwindCSS + Zustand. Image uploads via Cloudinary.",
+    tech: ["React", "Node.js", "MongoDB", "Redis", "Stripe", "Zustand", "Cloudinary"],
+    github: "https://github.com/sharafath-ali/NexBuy",
+    live: "https://nexbuy.onrender.com/",
+  },
+  {
+    icon: "💬",
+    title: "Chatterverse",
+    description:
+      "Real-time chat app on a monorepo architecture. Socket.IO messaging, JWT auth, Cloudinary media uploads, 32 DaisyUI themes, and full profile management. Deployed on Render with MongoDB Atlas.",
+    tech: ["React", "Express.js", "Socket.IO", "Zustand", "TailwindCSS", "DaisyUI", "JWT"],
+    github: "https://github.com/sharafath-ali/Chatterverse",
+    live: "https://chatterverse-0hba.onrender.com/",
+  },
+  {
+    icon: "🏢",
+    title: "HR Portal",
+    description:
+      "Employee management system with file/image uploads, descriptive notes, and secure SharePoint-backed APIs. Built with React + Material-UI + Sass frontend and Express.js backend.",
+    tech: ["React", "Express.js", "SharePoint", "Material-UI", "Sass"],
+    github: "https://github.com/sharafath-ali/node-react-HR-Portal",
+    live: "https://node-react-hr-portal.vercel.app/",
+  },
+  {
+    icon: "🗨️",
+    title: "iChat",
+    description:
+      "Real-time chat application using Socket.IO for event-driven messaging. Features server-side rendering with EJS for improved SEO and performance. Fully responsive for mobile and web.",
+    tech: ["Node.js", "Socket.IO", "Express.js", "EJS", "SSR"],
+    github: "https://github.com/sharafath-ali/Chat-app",
+    live: "https://wechat-i9go.onrender.com",
+  },
+  {
+    icon: "🎬",
+    title: "Flim-flix",
+    description:
+      "Responsive movie discovery app powered by the TMDB API. Features advanced search with debouncing, genre filters, detailed film info, ratings, and reviews. Built with React, Sass, and Material-UI.",
+    tech: ["React", "TMDB API", "Sass", "Material-UI"],
+    github: "https://github.com/sharafath-ali/Flim-flix",
+    live: "https://flim-flix.vercel.app/",
+  },
+];
 
 function ProjectCards() {
   return (
-    <div className="project-cards">
-      <div className="project-card">
-        <h3>NexBuy</h3>
-        <ul>
-          <li>
-            NexBuy is an advanced e-commerce platform designed to deliver a seamless online shopping experience. The app features user authentication, product listings, shopping cart management, and secure online payments via Stripe.
-          </li>
-          <li>
-            The backend is built with Node.js, Express.js, and MongoDB for robust data management, while Redis is used for efficient caching.
-          </li>
-          <li>
-            The frontend is developed using React.js, TailwindCSS, and Zustand for state management, delivering a fast and responsive user interface.
-          </li>
-          <li>
-            Integration with Cloudinary ensures smooth image uploads, and the platform is fully optimized for scalability and high performance.
-          </li>
-        </ul>
-        <div className="project-links">
-          <a
-            href="https://github.com/sharafath-ali/NexBuy"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="github-link"
+    <div className="projects-page">
+      <motion.div
+        initial={{ opacity: 0, y: -18 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h2>Projects</h2>
+        <p className="projects-subtitle">Things I've built that I'm proud of.</p>
+      </motion.div>
+
+      <div className="project-cards">
+        {projects.map((proj, i) => (
+          <motion.div
+            key={proj.title}
+            className="project-card"
+            initial={{ opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, delay: 0.1 + i * 0.1 }}
+            whileHover={{ y: -6 }}
           >
-            View on GitHub
-          </a>
-          <a
-            href="https://nexbuy.onrender.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="site-link"
-          >
-            See It Live
-          </a>
-        </div>
+            <div className="project-icon">{proj.icon}</div>
+            <h3>{proj.title}</h3>
+            <p className="project-desc">{proj.description}</p>
+
+            <div className="tech-tags">
+              {proj.tech.map((t) => (
+                <span key={t} className="tech-tag">{t}</span>
+              ))}
+            </div>
+
+            <div className="project-links">
+              <a
+                href={proj.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="github-link"
+              >
+                🐙 GitHub
+              </a>
+              <a
+                href={proj.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="site-link"
+              >
+                🚀 Live
+              </a>
+            </div>
+          </motion.div>
+        ))}
       </div>
-
-      <div className="project-card">
-        <h3>Chatterverse | MERN Stack App</h3>
-        <ul>
-          <li>
-            Chatterverse is a real-time chat application built on a monorepo architecture with a clean directory structure, integrating Express.js for the backend and React.js for the frontend, with state management powered by Zustand.
-          </li>
-          <li>
-            Deployed the application on Render with MongoDB Atlas as the database. Enabled real-time messaging using Socket.IO, supporting text and image messages between users.
-          </li>
-          <li>
-            Implemented secure user authentication with JWT, ensuring robust login/signup functionality.
-          </li>
-          <li>
-            Added a theme customization feature with DaisyUI, allowing users to switch between 32 available themes for a personalized app experience.
-          </li>
-          <li>
-            Developed a profile management section for users to view and update their profile picture and user details.
-          </li>
-          <li>
-            Integrated Cloudinary for secure and efficient media uploads.
-          </li>
-          <li>
-            Built a responsive and dynamic UI using Tailwind CSS and DaisyUI, ensuring compatibility across all device sizes.
-          </li>
-        </ul>
-        <div className="project-links">
-          <a
-            href="https://github.com/sharafath-ali/Chatterverse"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="github-link"
-          >
-            View on GitHub
-          </a>
-          <a
-            href="https://chatterverse-0hba.onrender.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="site-link"
-          >
-            See It Live
-          </a>
-        </div>
-      </div>
-
-      <div className="project-card">
-        <h3>HR-PORTAL App</h3>
-        <ul>
-          <li>
-            HR portal app streamlines employee management with features for
-            adding and updating employee information, uploading files and
-            images, and managing descriptive notes for each employee. It
-            ensures data accuracy, security, and a user-friendly experience
-            for HR personnel.
-          </li>
-          <li>
-            Built HR portal's front-end using React.js with Material UI for
-            modern design and SASS for organized styling, delivering a
-            responsive user interface across devices.
-          </li>
-          <li>
-            Express.js used for server-side, SharePoint as database. Secure
-            APIs for HR functionalities, data integrity, and user privacy
-            ensured.
-          </li>
-        </ul>
-        <div className="project-links">
-          <a
-            href="https://github.com/sharafath-ali/node-react-HR-Portal"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="github-link"
-          >
-            View on GitHub
-          </a>
-          <a
-            href="https://node-react-hr-portal.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="site-link"
-          >
-            See It Live
-          </a>
-        </div>
-      </div>
-
-      <div className="project-card">
-        <h3>iChat</h3>
-        <ul>
-          <li>
-            iChat is a robust real-time communication chat application designed for seamless interaction. Built with Socket.IO for real-time event-driven communication and Express.js for the backend, this app provides instant messaging capabilities, ensuring messages are delivered in real time without delays.
-          </li>
-          <li>
-            The application features server-side rendering, enhancing performance and improving SEO while delivering a smooth user experience. With a responsive design, iChat is accessible on both mobile and web platforms, allowing users to communicate effortlessly, whether at home or on the go.
-          </li>
-        </ul>
-        <div className="project-links">
-          <a
-            href="https://github.com/sharafath-ali/Chat-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="github-link"
-          >
-            View on GitHub
-          </a>
-          <a
-            href="https://wechat-i9go.onrender.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="site-link"
-          >
-            See It Live
-          </a>
-        </div>
-      </div>
-
-
-      <div className="project-card">
-        <h3>Flim-flix App</h3>
-        <ul>
-          <li>
-            Flim-flix is a fully responsive web application that offers comprehensive details about a wide range of films. Built using React, Sass , Material-UI , and the TMDB API, it delivers an intuitive and visually engaging user experience.
-          </li>
-          <li>
-            Smart Search Functionality: The application features an advanced search bar with debouncing, allowing users to find films effortlessly while minimizing the number of API calls, thus optimizing performance and ensuring a smooth browsing experience.
-          </li>
-          <li>
-            Users can explore various film genres, view detailed descriptions, and access ratings and reviews, making Flim-flix a one-stop platform for film enthusiasts.
-          </li>
-        </ul>
-        <div className="project-links">
-          <a
-            href="https://github.com/sharafath-ali/Flim-flix"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="github-link"
-          >
-            View on GitHub
-          </a>
-          <a
-            href="https://flim-flix.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="site-link"
-          >
-            See It Live
-          </a>
-        </div>
-      </div>
-
     </div>
-  )
+  );
 }
 
-export default ProjectCards
+export default ProjectCards;

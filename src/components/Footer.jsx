@@ -9,9 +9,9 @@ function Footer() {
   const { isMobile } = useContext(ViewportContext);
 
   return (
-    <footer className="footer" style={{ fontFamily: "'Poppins', sans-serif" }}>
+    <footer className="footer">
       <div className="footer-left">
-        <p>© 2024 All rights reserved | Made with ❤️ by Sharafath Ali</p>
+        <p>© 2025 All rights reserved · Made with ❤️ by Sharafath Ali</p>
       </div>
       <div className="footer-right">
         <a
@@ -19,24 +19,27 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           className="friend-logo"
+          title="LinkedIn"
         >
-          <img src={linkedin} className={isMobile ? "w-7 mx-1" : "w-13"} alt="LinkedIn" />
+          <img src={linkedin} alt="LinkedIn" />
         </a>
         <a
-          href="https://www.instagram.com/yourusername"  // Update with correct Instagram URL
+          href="https://www.instagram.com/yourusername"
           target="_blank"
           rel="noopener noreferrer"
           className="friend-logo"
+          title="Instagram"
         >
-          <img src={instagram} className={isMobile ? "w-7 mx-1" : "w-13"} alt="Instagram" />
+          <img src={instagram} alt="Instagram" />
         </a>
         <a
           href="https://github.com/sharafath-ali"
           target="_blank"
           rel="noopener noreferrer"
           className="friend-logo"
+          title="GitHub"
         >
-          <img src={gitHub} className={isMobile ? "w-7 mx-1" : "w-13"} alt="GitHub" />
+          <img src={gitHub} alt="GitHub" />
         </a>
       </div>
     </footer>
