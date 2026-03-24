@@ -51,9 +51,7 @@ function Header() {
       </div>
       <nav className="header-right">
         {isMobile ? (
-          <div className="dropdown">
-            <HeaderMenu active={active} onNav={scrollTo} links={NAV_LINKS} />
-          </div>
+          <HeaderMenu active={active} onNav={scrollTo} links={NAV_LINKS} />
         ) : (
           NAV_LINKS.map(({ label, href }) => (
             <a

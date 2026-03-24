@@ -86,8 +86,97 @@
   transform: translateX(-50%) scaleX(1);
 }
 
-/* ── MOBILE DROPDOWN ────────────────────────────────── */
-.dropdown {
+/* ── MOBILE MENU ────────────────────────────────────── */
+.mobile-menu-wrapper {
+  position: relative;
+}
+
+/* Hamburger button */
+.hamburger {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  padding: 6px;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.hamburger:hover {
+  border-color: var(--accent-primary);
+  background: rgba(108, 99, 255, 0.08);
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--text-secondary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* Animate to X when open */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background: var(--accent-primary);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  background: var(--accent-primary);
+}
+
+/* Mobile nav drawer */
+.mobile-nav {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 200px;
+  background: rgba(12, 12, 28, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 200;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 0.85rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.mobile-nav-link:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  color: var(--text-primary);
+  background: rgba(108, 99, 255, 0.1);
+  padding-left: 1.6rem;
+}
+
+.mobile-nav-link.active {
+  color: var(--accent-primary);
 }
