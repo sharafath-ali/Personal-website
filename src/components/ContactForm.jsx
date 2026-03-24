@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../Css/ContactForm.css";
+import SendIcon from "@mui/icons-material/Send";
 import { motion } from "framer-motion";
 
 const ContactForm = () => {
@@ -139,7 +140,7 @@ const ContactForm = () => {
         </div>
 
         <button type="submit" className="submit-btn" disabled={sending}>
-          {sending ? "⏳ Sending..." : "✉️ Send Message"}
+          {sending ? "Sending..." : <><SendIcon style={{ fontSize: "1.1rem" }} /> Send Message</>}
         </button>
 
         {successMessage && <p className="success-message">{successMessage}</p>}
