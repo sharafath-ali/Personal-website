@@ -20,7 +20,7 @@ function Header() {
     >
       <div className="header-left">
         <h1>Sharafath Ali</h1>
-        <p>Associate Software Developer</p>
+        <p>Senior Software Engineer</p>
       </div>
       <nav className="header-right">
         {isMobile ? (

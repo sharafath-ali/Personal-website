@@ -41,13 +41,13 @@ function Body() {
           </motion.h1>
 
           <motion.p className="hero-role" {...fadeUp(0.3)}>
-            Fullstack Web Developer — MERN Stack
+            Senior Software Engineer · Full-Stack · TypeScript · React · Node.js
           </motion.p>
 
           <motion.p className="description" {...fadeUp(0.4)}>
-            Passionate developer with 1.6+ years of experience building scalable
-            full-stack web apps. My journey started at Brototype and I haven't
-            stopped shipping since. I love turning ideas into polished products.
+            Full-Stack Software Engineer with <strong style={{color:'var(--accent-primary)'}}>2.7+ years of experience</strong> building
+            scalable web applications, integrating AI capabilities, and owning
+            products end-to-end — from architecture to deployment.
           </motion.p>
 
           {/* Social links */}
@@ -83,7 +83,7 @@ function Body() {
             <button className="btn-primary" onClick={() => navigate("/Projects")}>
               🚀 View Projects
             </button>
-            <a href={resumePDF} download="SHARAFATH ALI MAY CV.pdf" className="custom-link">
+            <a href={resumePDF} download="Sharafath_Ali_Resume.pdf" className="custom-link">
               <button className="btn-outline">
                 📄 Download Resume
               </button>
