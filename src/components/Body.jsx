@@ -48,7 +48,7 @@ function Body() {
 
           <motion.p className="description" {...fadeUp(0.4)}>
             Full-Stack Software Engineer with <strong style={{color:'var(--accent-primary)'}}>2.7+ years of experience</strong> building
-            scalable web applications, integrating AI capabilities, and owning
+            scalable web applications, integrating AI features, and owning
             products end-to-end — from architecture to deployment.
           </motion.p>
 
