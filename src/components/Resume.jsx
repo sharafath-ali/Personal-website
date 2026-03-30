@@ -97,14 +97,10 @@ function Resume() {
                   integration.
                 </li>
                 <li>
-                  Handled seamless database schema updates for new feature
-                  rollouts, ensuring zero-downtime execution and safe client
-                  data migrations.
-                </li>
-                <li>
-                  Resolved critical production issues and delivered steady
-                  feature updates to reinforce system stability and core
-                  performance.
+                  Resolved critical production issues and developed new features
+                  requiring seamless database schema updates, authoring automated
+                  client data migrations to ensure zero data loss and system
+                  stability.
                 </li>
               </ul>
             </div>
