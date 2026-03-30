@@ -59,8 +59,8 @@ const ContactForm = () => {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.5 }}
       >
-        <h2>Contact Me</h2>
-        <p className="contact-subtitle">Got a project in mind? Let's talk! 🚀</p>
+        <h2>Contact</h2>
+        <p className="contact-subtitle">Open to discussing projects, ideas, or opportunities.</p>
       </motion.div>
 
       <motion.form

@@ -60,7 +60,7 @@ function ProjectCards() {
         transition={{ duration: 0.5 }}
       >
         <h2>Projects</h2>
-        <p className="projects-subtitle">Things I've built that I'm proud of.</p>
+        <p className="projects-subtitle">A few projects I’ve built and worked on.</p>
       </motion.div>
 
       <div className="project-cards">

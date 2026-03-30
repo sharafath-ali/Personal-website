@@ -11,7 +11,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-left">
-        <p>© 2025 All rights reserved · Made with ❤️ by Sharafath Ali</p>
+        <p>© 2026 Sharafath Ali · Built with ❤️</p>
       </div>
       <div className="footer-right">
         <a
