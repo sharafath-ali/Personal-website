@@ -23,8 +23,11 @@ function Resume() {
   return (
     <div className="resume-page">
       <motion.div {...fadeUp(0)}>
-        <h2>My Resume</h2>
-        <p className="resume-subtitle">2.7+ years of hands-on experience across product companies — shipping real features that users rely on.</p>
+        <h2>Resume</h2>
+        <p className="resume-subtitle">
+          2.7+ years building scalable, production-grade features used by real
+          users across product companies.
+        </p>
       </motion.div>
 
       {/* EXPERIENCE */}
@@ -34,8 +37,21 @@ function Resume() {
           <div className="timeline-item">
             <div className="card experience-card">
               <h4 className="job-title">Senior Software Engineer</h4>
-              <p className="company-name">Virginia Rehab Physicians · Richmond, VA (Remote)</p>
+              <p className="company-name">
+                Virginia Rehab Physicians · Richmond, VA (Remote)
+              </p>
               <p className="employment-dates">Feb 2025 – Mar 2026</p>
+              <p
+                className="experience-desc"
+                style={{
+                  marginTop: "0.6rem",
+                  fontSize: "0.9rem",
+                  color: "var(--text-secondary)",
+                  lineHeight: "1.5",
+                }}
+              >
+                Developed full-stack features for a healthcare SaaS platform using React, Node.js, and PostgreSQL. Built AI-powered workflows with Vertex AI for automated OCR onboarding and diagnosis mapping. Managed the frontend migration to TypeScript, Vite, and Tailwind CSS to improve performance. Additionally, implemented bi-directional EHR integrations and established an automated testing pipeline (Playwright, Jest, RTL) integrated directly into CI/CD.
+              </p>
             </div>
           </div>
           <div className="timeline-item">
@@ -43,6 +59,17 @@ function Resume() {
               <h4 className="job-title">Associate Software Engineer</h4>
               <p className="company-name">Global Infonet Inc · Kochi</p>
               <p className="employment-dates">Sept 2023 – Sept 2024</p>
+              <p
+                className="experience-desc"
+                style={{
+                  marginTop: "0.6rem",
+                  fontSize: "0.9rem",
+                  color: "var(--text-secondary)",
+                }}
+              >
+                Developed full-stack features using React and Node.js for
+                production applications.
+              </p>
             </div>
           </div>
           <div className="timeline-item">
@@ -50,6 +77,17 @@ function Resume() {
               <h4 className="job-title">Trainee Software Engineer</h4>
               <p className="company-name">Global Infonet Inc · Kochi</p>
               <p className="employment-dates">Mar 2023 – Aug 2023</p>
+              <p
+                className="experience-desc"
+                style={{
+                  marginTop: "0.6rem",
+                  fontSize: "0.9rem",
+                  color: "var(--text-secondary)",
+                }}
+              >
+                Contributed to core modules and gained hands-on experience in
+                full-stack development.
+              </p>
             </div>
           </div>
         </div>
@@ -61,14 +99,18 @@ function Resume() {
         <div className="timeline">
           <div className="timeline-item">
             <div className="card">
-              <h4 className="job-title">Master of Computer Applications (MCA)</h4>
+              <h4 className="job-title">
+                Master of Computer Applications (MCA)
+              </h4>
               <p className="company-name">IGNOU — Pursuing</p>
               <p className="employment-dates">2025 – 2027</p>
             </div>
           </div>
           <div className="timeline-item">
             <div className="card">
-              <h4 className="job-title">Bachelor of Computer Applications (BCA)</h4>
+              <h4 className="job-title">
+                Bachelor of Computer Applications (BCA)
+              </h4>
               <p className="company-name">Jamia Hamdard University, Delhi</p>
               <p className="employment-dates">Graduated 2022</p>
             </div>
@@ -97,7 +139,10 @@ function Resume() {
                   initial={{ opacity: 0, scale: 0.85 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true, amount: 0.1 }}
-                  transition={{ duration: 0.3, delay: 0.4 + catIdx * 0.08 + i * 0.03 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: 0.4 + catIdx * 0.08 + i * 0.03,
+                  }}
                 >
                   {skill.emoji} {skill.label}
                 </motion.span>
