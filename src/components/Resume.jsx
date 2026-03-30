@@ -50,8 +50,8 @@ function Resume() {
                   lineHeight: "1.5",
                 }}
               >
-                Built and optimized core workflows within a healthcare SaaS
-                platform, including patient onboarding, admissions, insurance
+                Built and optimized core workflows for an internal, multi-tenant
+                healthcare SaaS product, including patient onboarding, admissions, insurance
                 processing, and clinical data synchronization with EHR systems.
                 Delivered AI-powered automation for OCR-based data extraction
                 and notes-to-diagnosis mapping using Vertex AI, while ensuring
