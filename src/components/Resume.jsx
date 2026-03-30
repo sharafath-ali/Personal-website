@@ -51,12 +51,13 @@ function Resume() {
                 }}
               >
                 Built and optimized core workflows for an internal, multi-tenant
-                healthcare SaaS product, including patient onboarding, admissions, insurance
-                processing, and clinical data synchronization with EHR systems.
-                Delivered AI-powered automation for OCR-based data extraction
-                and notes-to-diagnosis mapping using Vertex AI, while ensuring
-                system reliability through solid architecture, comprehensive
-                testing, and performance optimizations.
+                healthcare SaaS product, including patient onboarding,
+                admissions, insurance processing, and clinical data
+                synchronization with EHR systems. Delivered AI-powered
+                automation for OCR-based data extraction and notes-to-diagnosis
+                mapping using Vertex AI, while ensuring system reliability
+                through solid architecture, comprehensive testing, and
+                performance optimizations.
               </p>
             </div>
           </div>
@@ -65,17 +66,47 @@ function Resume() {
               <h4 className="job-title">Associate Software Engineer</h4>
               <p className="company-name">Global Infonet Inc · Kochi</p>
               <p className="employment-dates">Sept 2023 – Sept 2024</p>
-              <p
-                className="experience-desc"
+              <ul
+                className="experience-list"
                 style={{
-                  marginTop: "0.6rem",
-                  fontSize: "0.9rem",
+                  marginTop: "0.8rem",
+                  fontSize: "0.88rem",
                   color: "var(--text-secondary)",
+                  lineHeight: "1.5",
+                  paddingLeft: "1.2rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.4rem",
                 }}
               >
-                Developed full-stack features using React and Node.js for
-                production applications.
-              </p>
+                <li>
+                  Led development of the Quick Link panel feature in Dock 365
+                  CMS (v4.8), integrating 28 interactive panels for in-place
+                  record viewing and editing, cutting page redirects and
+                  navigation time by 40%.
+                </li>
+                <li>
+                  Revamped responsive UI with React.js and SPFx (Fluent UI),
+                  driving faster load times via code splitting, lazy loading,
+                  and preventing unnecessary re-renders using memoization.
+                </li>
+                <li>
+                  Optimized Node.js and Express.js backend services, reducing
+                  API response times via Redis caching, MongoDB query
+                  optimization (indexing & pagination), and smooth SharePoint
+                  integration.
+                </li>
+                <li>
+                  Handled seamless database schema updates for new feature
+                  rollouts, ensuring zero-downtime execution and safe client
+                  data migrations.
+                </li>
+                <li>
+                  Resolved critical production issues and delivered steady
+                  feature updates to reinforce system stability and core
+                  performance.
+                </li>
+              </ul>
             </div>
           </div>
           <div className="timeline-item">
@@ -91,8 +122,11 @@ function Resume() {
                   color: "var(--text-secondary)",
                 }}
               >
-                Contributed to core modules and gained hands-on experience in
-                full-stack development.
+                Worked on Dock 365 CMS, a web-based contract management system,
+                contributing to both frontend and backend feature development
+                and bug fixes. Worked under senior developers, gaining hands-on
+                experience in development, debugging, coding standards, and
+                Git-based version control within an agile team.
               </p>
             </div>
           </div>
