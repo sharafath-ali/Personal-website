@@ -66,43 +66,17 @@ function Resume() {
               <h4 className="job-title">Associate Software Engineer</h4>
               <p className="company-name">Global Infonet Inc · Kochi</p>
               <p className="employment-dates">Sept 2023 – Sept 2024</p>
-              <ul
-                className="experience-list"
+              <p
+                className="experience-desc"
                 style={{
-                  marginTop: "0.8rem",
-                  fontSize: "0.88rem",
+                  marginTop: "0.6rem",
+                  fontSize: "0.9rem",
                   color: "var(--text-secondary)",
                   lineHeight: "1.5",
-                  paddingLeft: "1.2rem",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "0.4rem",
                 }}
               >
-                <li>
-                  Led development of the Quick Link panel feature in Dock 365
-                  CMS (v4.8), integrating 28 interactive panels for in-place
-                  record viewing and editing, cutting page redirects and
-                  navigation time by 40%.
-                </li>
-                <li>
-                  Revamped responsive UI with React.js and SPFx (Fluent UI),
-                  driving faster load times via code splitting, lazy loading,
-                  and preventing unnecessary re-renders using memoization.
-                </li>
-                <li>
-                  Optimized Node.js and Express.js backend services, reducing
-                  API response times via Redis caching, MongoDB query
-                  optimization (indexing & pagination), and smooth SharePoint
-                  integration.
-                </li>
-                <li>
-                  Resolved critical production issues and developed new features
-                  requiring seamless database schema updates, authoring automated
-                  client data migrations to ensure zero data loss and system
-                  stability.
-                </li>
-              </ul>
+                Drove full-stack development and optimization for Dock 365 CMS, leading the implementation of high-impact features like a Quick Link panel array that reduced user navigation time by 40%. Revamped the application's overall performance by optimizing the React.js/SPFx frontend with advanced lazy loading, while accelerating the Node.js/Express.js backend through Redis caching and MongoDB query optimizations. Additionally, handled complex database migrations and resolved critical production issues to ensure a highly stable, zero-downtime experience for enterprise clients.
+              </p>
             </div>
           </div>
           <div className="timeline-item">
