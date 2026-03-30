@@ -7,7 +7,7 @@ const projects = [
     icon: "🛒",
     title: "NexBuy",
     description:
-      "Advanced e-commerce platform with user auth, product listings, cart management, and secure Stripe payments. Backend: Node.js + Express + MongoDB + Redis. Frontend: React + TailwindCSS + Zustand. Image uploads via Cloudinary.",
+      "Advanced e-commerce platform with Admin & User dashboards, user auth, product listings, cart management, and secure Stripe payments. Backend: Node.js + Express + MongoDB + Redis. Frontend: React + TailwindCSS + Zustand. Image uploads via Cloudinary.",
     tech: ["React", "Node.js", "MongoDB", "Redis", "Stripe", "Zustand", "Cloudinary"],
     github: "https://github.com/sharafath-ali/NexBuy",
     live: "https://nexbuy.onrender.com/",
