@@ -50,7 +50,13 @@ function Resume() {
                   lineHeight: "1.5",
                 }}
               >
-                Developed full-stack features for a healthcare SaaS platform using React, Node.js, and PostgreSQL. Built AI-powered workflows with Vertex AI for automated OCR onboarding and diagnosis mapping. Managed the frontend migration to TypeScript, Vite, and Tailwind CSS to improve performance. Additionally, implemented bi-directional EHR integrations and established an automated testing pipeline (Playwright, Jest, RTL) integrated directly into CI/CD.
+                Built and optimized core workflows within a healthcare SaaS
+                platform, including patient onboarding, admissions, insurance
+                processing, and clinical data synchronization with EHR systems.
+                Delivered AI-powered automation for OCR-based data extraction
+                and notes-to-diagnosis mapping using Vertex AI, while ensuring
+                system reliability through solid architecture, comprehensive
+                testing, and performance optimizations.
               </p>
             </div>
           </div>
