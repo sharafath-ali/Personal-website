@@ -39,15 +39,6 @@ const projects = [
     github: "https://github.com/sharafath-ali/Chat-app",
     live: "https://wechat-i9go.onrender.com",
   },
-  {
-    icon: "🎬",
-    title: "Flim-flix",
-    description:
-      "Responsive movie discovery app powered by the TMDB API. Features advanced search with debouncing, genre filters, detailed film info, ratings, and reviews. Built with React, Sass, and Material-UI.",
-    tech: ["React", "TMDB API", "Sass", "Material-UI"],
-    github: "https://github.com/sharafath-ali/Flim-flix",
-    live: "https://flim-flix.vercel.app/",
-  },
 ];
 
 function ProjectCards() {
