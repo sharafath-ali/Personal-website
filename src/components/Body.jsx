@@ -34,8 +34,8 @@ function Body() {
 
         {/* Text */}
         <div className="profile-info">
-          <motion.p className="hero-greeting" {...fadeUp(0.1)}>
-            👋 Welcome to my portfolio
+          <motion.p className="hero-greeting" {...fadeUp(0.1)} style={{ textTransform: "none", letterSpacing: "0.5px", fontSize: "1rem" }}>
+            <span style={{ fontSize: "1.4rem", marginRight: "0.4rem" }}>👋</span> Hey, I'm
           </motion.p>
 
           <motion.h1 className="hero-name" {...fadeUp(0.2)}>
@@ -53,14 +53,14 @@ function Body() {
           </motion.p>
 
           {/* Social links */}
-          <motion.div className="social-links" {...fadeUp(0.5)}>
+          <motion.div className="social-links" {...fadeUp(0.4)}>
             <a href="https://github.com/sharafath-ali/" target="_blank" rel="noopener noreferrer" className="social-pill">🐙 GitHub</a>
             <a href="https://sharafath.hashnode.dev/" target="_blank" rel="noopener noreferrer" className="social-pill">✍️ Hashnode Blog</a>
             <a href="https://www.linkedin.com/in/sharafathalivk" target="_blank" rel="noopener noreferrer" className="social-pill">💼 LinkedIn</a>
           </motion.div>
 
           {/* CTA Buttons */}
-          <motion.div className="buttons" {...fadeUp(0.6)}>
+          <motion.div className="buttons" {...fadeUp(0.5)}>
             <button className="btn-primary" onClick={scrollToProjects}>
               🚀 View Projects
             </button>
