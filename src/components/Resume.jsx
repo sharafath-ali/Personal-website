@@ -41,42 +41,54 @@ function Resume() {
                 Virginia Rehab Physicians · Richmond, VA (Remote)
               </p>
               <p className="employment-dates">Feb 2025 – Mar 2026</p>
-              <p
+              <ul
                 className="experience-desc"
                 style={{
                   marginTop: "0.6rem",
                   fontSize: "0.9rem",
                   color: "var(--text-secondary)",
                   lineHeight: "1.5",
+                  paddingLeft: "1.2rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.4rem"
                 }}
               >
-                Built and optimized core workflows for an internal, multi-tenant
-                healthcare SaaS product, including patient onboarding,
-                admissions, insurance processing, and clinical data
-                synchronization with EHR systems. Delivered AI-powered
-                automation for OCR-based data extraction and notes-to-diagnosis
-                mapping using Vertex AI, while ensuring system reliability
-                through solid architecture, comprehensive testing, and
-                performance optimizations.
-              </p>
+                <li>Designed and implemented an AI-powered OCR patient onboarding feature for Codona, a healthcare SaaS platform, using Vertex AI to extract patient, admission, and insurance data from PDF facesheets, automating form population and mapping data to internal records, reducing manual entry time and improving onboarding speed and data accuracy.</li>
+                <li>Redesigned and implemented end-to-end patient, admission, and insurance workflows by consolidating scattered routes into a unified flow, ensuring consistent data synchronization with Codana and AdvancedMD (EHR) and enabling safe, reversible operations.</li>
+                <li>Implemented an AI-powered notes-to-diagnosis feature using Vertex AI to convert clinical notes into ICD-10 codes with automatic primary diagnosis identification, reducing manual ICD-10 search and mapping effort.</li>
+                <li>Developed and maintained a scalable multi-tenant backend using Express.js and PostgreSQL, ensuring secure client-level data separation and seamless client onboarding.</li>
+                <li>Implemented an audit logging feature to track all user actions, making activity visible through an audit interface and improving traceability to meet HIPAA audit requirements.</li>
+                <li>Migrated the frontend from JavaScript to TypeScript and from deprecated Create React App (CRA) to Vite, improving type safety, build performance, and maintainability.</li>
+                <li>Established a comprehensive automated testing setup by implementing E2E tests (Playwright), backend unit and integration tests (Jest, Supertest with database validation), and frontend tests (React Testing Library), achieving near 100% coverage and integrating all tests into the CI/CD pipeline to ensure reliable builds and prevent regressions.</li>
+                <li>Refactored the frontend application and redesigned the UI using Tailwind CSS, introducing reusable components and shared utility functions to reduce code duplication, bundle size, and initial load time.</li>
+                <li>Led feature development and release cycles during the tech lead's absence, managing code reviews, pull request merges, and deployments to ensure uninterrupted releases and system stability.</li>
+              </ul>
             </div>
           </div>
           <div className="timeline-item">
             <div className="card experience-card">
               <h4 className="job-title">Associate Software Engineer</h4>
               <p className="company-name">Global Infonet Inc · Kochi</p>
-              <p className="employment-dates">Sept 2023 – Sept 2024</p>
-              <p
+              <p className="employment-dates">Sept 2023 – Oct 2024</p>
+              <ul
                 className="experience-desc"
                 style={{
                   marginTop: "0.6rem",
                   fontSize: "0.9rem",
                   color: "var(--text-secondary)",
                   lineHeight: "1.5",
+                  paddingLeft: "1.2rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.4rem"
                 }}
               >
-                Drove full-stack development and optimization for Dock 365 CMS, leading the implementation of high-impact features like a Quick Link panel array that reduced user navigation time by 40%. Revamped the application's overall performance by optimizing the React.js/SPFx frontend with advanced lazy loading, while accelerating the Node.js/Express.js backend through Redis caching and MongoDB query optimizations. Additionally, handled complex database migrations and resolved critical production issues to ensure a highly stable, zero-downtime experience for enterprise clients.
-              </p>
+                <li>Led the development of Quick Link panel feature in Dock 365 CMS (v4.8), integrating 28 interactive panels to enable in-place viewing and editing of related records, reducing page redirects by 40% and reducing navigation time by 40%.</li>
+                <li>Revamped responsive UI with React.js + SPFx (Fluent UI), reducing initial load time through code splitting, lazy loading, and reusable components, while minimizing unnecessary re-renders using memoization.</li>
+                <li>Built and optimized backend services using Node.js and Express.js, reduced API response time through Redis caching and MongoDB query optimization (indexing, pagination), and integrated SharePoint for document management.</li>
+                <li>Resolved critical production issues and developed features involving database schema changes, implementing safe data migrations to ensure no client data loss and maintain system stability.</li>
+              </ul>
             </div>
           </div>
           <div className="timeline-item">
@@ -84,20 +96,22 @@ function Resume() {
               <h4 className="job-title">Trainee Software Engineer</h4>
               <p className="company-name">Global Infonet Inc · Kochi</p>
               <p className="employment-dates">Mar 2023 – Aug 2023</p>
-              <p
+              <ul
                 className="experience-desc"
                 style={{
                   marginTop: "0.6rem",
                   fontSize: "0.9rem",
                   color: "var(--text-secondary)",
+                  lineHeight: "1.5",
+                  paddingLeft: "1.2rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.4rem"
                 }}
               >
-                Worked on Dock 365 CMS, a web-based contract management system,
-                contributing to both frontend and backend feature development
-                and bug fixes. Worked under senior developers, gaining hands-on
-                experience in development, debugging, coding standards, and
-                Git-based version control within an agile team.
-              </p>
+                <li>Worked on Dock 365 CMS, a web-based contract management system, contributing to both frontend and backend feature development and bug fixes.</li>
+                <li>Worked under senior developers, gaining hands-on experience in development, debugging, coding standards, and Git-based version control within an agile team.</li>
+              </ul>
             </div>
           </div>
         </div>
