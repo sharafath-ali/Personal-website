@@ -17,7 +17,7 @@ const projects = [
     title: "Chatterverse",
     description:
       "Real-time chat app on a monorepo architecture. Features Socket.IO messaging, live audio/video calls, JWT auth, Cloudinary media uploads, 32 DaisyUI themes, and full profile management. Deployed on Render with MongoDB Atlas.",
-    tech: ["React", "Express.js", "Socket.IO", "Zustand", "TailwindCSS", "DaisyUI", "JWT"],
+    tech: ["React", "Express.js", "Socket.IO", "WebRTC", "Zustand", "TailwindCSS", "DaisyUI", "JWT"],
     github: "https://github.com/sharafath-ali/Chatterverse",
     live: "https://chatterverse-0hba.onrender.com/",
   },
