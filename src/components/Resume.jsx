@@ -168,7 +168,16 @@ function Resume() {
                     delay: 0.4 + catIdx * 0.08 + i * 0.03,
                   }}
                 >
-                  {skill.emoji} {skill.label}
+                  {skill.icon && (
+                    <skill.icon
+                      style={{
+                        color: skill.color ?? "var(--accent-primary)",
+                        flexShrink: 0,
+                        fontSize: "1.05em",
+                      }}
+                    />
+                  )}
+                  {skill.label}
                 </motion.span>
               ))}
             </div>
