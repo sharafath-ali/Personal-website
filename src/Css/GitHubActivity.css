@@ -1,0 +1,56 @@
+/* ── GITHUB INLINE BLOCK (inside Resume section) ───────── */
+.github-inline-block {
+  margin-top: 0.5rem;
+}
+
+.github-inline-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.github-inline-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.github-inline-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: all var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.github-inline-link:hover {
+  color: var(--accent-secondary);
+  transform: translateX(3px);
+}
+
+/* ── CALENDAR CARD ─────────────────────────────────────── */
+.calendar-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.5rem 1.25rem;
+  overflow-x: auto;
+  transition: all var(--transition);
+}
+
+.calendar-wrapper:hover {
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .calendar-wrapper { padding: 1rem 0.75rem; }
+  .github-inline-header { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+}

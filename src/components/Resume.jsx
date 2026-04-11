@@ -3,6 +3,7 @@ import "../Css/Resume.css";
 import resumePDF from "../Assets/resume.pdf";
 import { SkillCategories } from "../consts/skills";
 import { motion } from "framer-motion";
+import GitHubActivity from "./GitHubActivity";
 
 const categoryClass = {
   Frontend: "",
@@ -183,6 +184,12 @@ function Resume() {
             </div>
           </motion.div>
         ))}
+      </motion.div>
+
+      {/* GITHUB ACTIVITY */}
+      <motion.div className="resume-section" {...fadeUp(0.45)}>
+        <h3>🗓️ Activity</h3>
+        <GitHubActivity />
       </motion.div>
 
       {/* DOWNLOAD */}
