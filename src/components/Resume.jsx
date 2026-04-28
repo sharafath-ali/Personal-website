@@ -137,7 +137,7 @@ function Resume() {
                 Bachelor of Computer Applications (BCA)
               </h4>
               <p className="company-name">Jamia Hamdard University, Delhi</p>
-              <p className="employment-dates">Graduated 2022</p>
+              <p className="employment-dates">2019 – 2022</p>
             </div>
           </div>
         </div>
